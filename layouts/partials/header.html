@@ -62,7 +62,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ .Site.Params.hjsVersion }}/languages/{{ $language }}.min.js"></script>
           {{ end }}
         {{ end }}
-        <script>hljs.initHighlightingOnLoad();</script>
+        <script type="text/javascript" src="{{"js/hjsload.js" | relURL}}"></script>
     {{end}}
 
     {{ if .Site.Params.RSSLink}}
