@@ -54,8 +54,8 @@
     {{ end }}
 
     {{ if .Site.Params.hjsStyle }}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ .Site.Params.hjsVersion }}/styles/{{ .Site.Params.hjsStyle }}.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ .Site.Params.hjsVersion }}/highlight.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/solarized-light.min.css" integrity="sha384-bFKDPkG3geCujYJIbPornilfOgmYQoPS45Oh/8daqqo1SUwNY06OeHorpgnNvx82" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha384-BlPof9RtjBqeJFskKv3sK3dh4Wk70iKlpIe92FeVN+6qxaGUOUu+mZNpALZ+K7ya" crossorigin="anonymous"></script>
         {{ if or .Site.Params.hjsExtraLanguages .Params.hjsExtraLanguages }}
           {{ range $index, $language := (union .Site.Params.hjsExtraLanguages .Params.hjsExtraLanguages) }}
             <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ .Site.Params.hjsVersion }}/languages/{{ $language }}.min.js"></script>
