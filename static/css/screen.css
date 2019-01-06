@@ -2014,10 +2014,11 @@ body:not(.post-template) .post-title {
     text-decoration: none;
     position: relative;
     text-align: center;
-    color: #fff;
-    background: #222 no-repeat center center;
+    color: #F7FAFB;
+    background: #F7FAFB no-repeat center center;
     background-size: cover;
     overflow: hidden;
+    margin-bottom: 4px;
 }
 .read-next-story:hover:before {
     background: rgba(0,0,0,0.8);
@@ -2025,7 +2026,7 @@ body:not(.post-template) .post-title {
 }
 .read-next-story:hover .post:before {
     color: #222;
-    background: #fff;
+    background: #F7FAFB;
     transition: all 0.2s ease;
 }
 
@@ -2042,8 +2043,8 @@ body:not(.post-template) .post-title {
 }
 
 .read-next-story .post {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     border-bottom: none;
 }
 
@@ -2064,7 +2065,7 @@ body:not(.post-template) .post-title {
 
 .read-next-story h2 {
     margin-top: 1rem;
-    color: #fff;
+    color: #F7FAFB;
 }
 
 .read-next-story p {
@@ -2092,6 +2093,10 @@ body:not(.post-template) .post-title {
 
 .read-next-story.no-cover p {
     color: rgba(0,0,0,0.5);
+}
+
+.read-next-story .post:after {
+  content: none;
 }
 
 /* if there are two posts without covers, put a border between them */
