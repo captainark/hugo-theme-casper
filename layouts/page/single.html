@@ -84,7 +84,7 @@
         <section class="post-meta">
         {{ if eq .Section "post"}}
           <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
-            {{ .Date.Format "Jan 2, 2006" }}
+            {{ .Date.Format "02 January 2006" }}
           </time>
         {{end}}
          {{ range .Params.tags }}
@@ -154,9 +154,9 @@
   <footer class="post-footer">
 
 
-    {{if .Site.Params.logo}}
+    {{if .Site.Params.authoravatar}}
     <figure class="author-image">
-        <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{.Site.Params.logo | relURL}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
+        <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{.Site.Params.authoravatar | relURL}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
     </figure>
     {{end}}
 
@@ -165,6 +165,8 @@
     {{ partial "share.html" . }}
 
     {{ partial "disqus.html" . }}
+
+    {{ partial "isso.html" . }}
 
   </footer>
 </article>

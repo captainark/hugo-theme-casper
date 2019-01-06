@@ -1,0 +1,9 @@
+{{ if ne .Params.comments false}}
+
+{{ "<!-- isso -->" | safeHTML }}
+<script data-isso="{{ .Site.BaseURL }}comments/" src="{{ .Site.BaseURL }}comments/js/embed.min.js"></script>
+<noscript>Please enable JavaScript to view comments</noscript>
+<section id="isso-thread"></section>
+{{ "<!-- end isso -->" | safeHTML }}
+
+{{ end }}

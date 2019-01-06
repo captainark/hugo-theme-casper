@@ -12,13 +12,13 @@
     "author": {
         "@type": "Person",
         "name": {{ .Site.Params.authorname }},
-        {{ with .Site.Params.logo }}
+        {{ with .Site.Params.authoravatar }}
         "image": {
             "@type": "ImageObject",
             "url": {{ printf "%s%s" $.Site.BaseURL . }},
             "width": 250,
             "height": 250
-        }, 
+        },
         {{end}}
         "url": {{ .Site.Params.authorwebsite }},
         "sameAs": [
@@ -65,7 +65,7 @@
     "publisher": {
         "@type": "Person",
         "name": {{ .Site.Params.authorname }},
-        {{ with .Site.Params.logo }}
+        {{ with .Site.Params.authoravatar }}
         "image": {
             "@type": "ImageObject",
             "url": {{ printf "%s%s" $.Site.BaseURL . }},
@@ -92,4 +92,3 @@
 }
   </script>
     {{ end }}
-
